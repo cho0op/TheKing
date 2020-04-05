@@ -6,5 +6,15 @@
 </head>
 <body>
 <h1>Home</h1>
+{{ king.name }}
+<img src="{{king.picture.url}}">
+<form method="POST" enctype="multipart/form-data" >
+    {% csrf_token %}
+    {{ form.name }}
+    <br>
+    {{ form.pic }}
+    <br>
+    <button type="submit">send</button>
+</form>
 </body>
 </html>
